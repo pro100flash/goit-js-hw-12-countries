@@ -20,6 +20,7 @@ body::after {
     opacity: 0.9;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 * {
