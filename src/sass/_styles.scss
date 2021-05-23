@@ -10,7 +10,7 @@ body {
 
 body::after {
     content: '';
-    background-image: url(../img/map.png);
+    background-image: url("../img/map.png");
     top: 0;
     left: 0;
     bottom: 0;
