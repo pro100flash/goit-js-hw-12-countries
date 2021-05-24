@@ -10,7 +10,7 @@ import { error, notice } from '@pnotify/core';
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
 
-function searchInput(e) {
+const searchInput = e => {
     const searchQuery = e.target.value;
     refs.countriesMrkp.innerHTML = '';
 
