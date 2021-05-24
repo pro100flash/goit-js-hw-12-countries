@@ -40,9 +40,8 @@ const noticeInfo = () => {
         notice({
             title: 'OOPS!',
             text: 'Invalid entered value. Try again =)',
-            delay: 2000,
+            delay: 2500,
         });
 }
 
 refs.search.addEventListener('input', debounce(searchInput, 500));
-export default { noticeInfo };
