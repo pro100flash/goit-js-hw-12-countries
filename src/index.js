@@ -13,10 +13,14 @@ import '@pnotify/core/dist/BrightTheme.css';
 function searchInput(e) {
     const searchQuery = e.target.value;
     refs.countriesMrkp.innerHTML = '';
+
+    if (searchQuery.length < 1)
+    return;
+
     API.fetchCountries(searchQuery)
     .then(dataShow)
     .catch(noticeInfo);
-}
+};
 
 const dataShow = countries => {
     if (countries.length > 10) {
@@ -33,14 +37,12 @@ const dataShow = countries => {
     };
 };
 const noticeInfo = () => {
-    if (length = 'null') { 
         notice({
             title: 'OOPS!',
             text: 'Invalid entered value. Try again =)',
             delay: 2000,
         });
-    }
 }
 
 refs.search.addEventListener('input', debounce(searchInput, 500));
-
+export default { noticeInfo };
